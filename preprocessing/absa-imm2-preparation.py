@@ -21,4 +21,6 @@ df["label"] = df["label"].replace(["2.0", "3.0", "4.0", "5.0"], ["1.0", "2.0", "
 df["label"] = pd.to_numeric(df["label"])
 df["label"] = df["label"].astype(int)
 df = df[["text", "label"]] # Throw away all data except text and label
+
+
 df.to_csv("/path/to/outfile.csv") # Save as csv

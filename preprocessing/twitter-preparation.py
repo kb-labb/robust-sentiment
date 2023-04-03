@@ -13,6 +13,8 @@ test_df = pd.read_csv(test_file, delimiter = ",", quotechar = "|", encoding = "u
 
 df = pd.concat([train_df, test_df], ignore_index=True)
 
+df["Tweet"] = df["Tweet"].str.strip()
+
 df.rename(columns={'Tweet': 'text', 'Sentiment': 'label'}, inplace=True) # Rename columns
 
 # Original data is in format: -1 = negative, 0 = neutral, 1 = positive
