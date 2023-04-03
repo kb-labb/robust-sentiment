@@ -1,0 +1,10 @@
+file = open("news_to_be_annotated.csv", "r")
+
+for line in file:
+    items = line.split("\t")
+    if len(items) > 3:
+        text = items[0][2:]
+        if text:
+            paper = items[1]
+            date = items[2]
+            print(text + ", " + paper + ", " + date)
