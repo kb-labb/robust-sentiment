@@ -24,7 +24,7 @@ df.rename(columns={'Tweet': 'text', 'Sentiment': 'label'}, inplace=True) # Renam
 # Here we normalize the scale so that 1 = negative, 2 = neutral, 3 = positive
 
 df["label"] = df["label"].astype(str) # Convert to string in preparation for replace method
-df["label"] = df["label"].replace(["-1", "0", "1"], ["1", "2", "3"])
+df["label"] = df["label"].replace(["-1", "0", "1"], ["0", "1", "2"])
 df["label"] = pd.to_numeric(df["label"])
 df["label"] = df["label"].astype(int)
 
