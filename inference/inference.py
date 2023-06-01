@@ -2,6 +2,10 @@ import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
+## TODO()
+## REWRITE THIS SCRIPT TO BE A MINIMAL NON-PROJECT SPECIFIC 
+
+
 #df_test = pd.read_csv('test.csv').fillna('')
 df = pd.read_csv("/home/hilhag/robustly-sentimental/headlines/sample.csv")
 #df = df.applymap(str)
@@ -47,5 +51,5 @@ def predict(i):
 index = df.loc[df['HEADLINE'].str.strip().astype(bool)].index
 df.loc[index, 'SENTIMENT'] = [predict(df.loc[i]["HEADLINE"]) for i in range(len(index))]
 
-df.to_csv('testframe.csv') # save to disk
+df.to_csv('test.csv') # save to disk
 # maybe do this continuously instead
