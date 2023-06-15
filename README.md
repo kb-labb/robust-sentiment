@@ -5,5 +5,4 @@ A robust, transformed based sentiment analysis module of Swedish text. Trained o
 # Städa upp detta repo
 # Överför modeller till KB-labbs HF
 # Skriv Huggingface model card
-# Skriv blogginlägg
 # Done
