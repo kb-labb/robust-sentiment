@@ -7,7 +7,8 @@ import torch
 from tqdm import tqdm
 import transformers
 
-# Compile NoReC data and outputs machine translated txt files from Norweigan to Swedish in the same format as the original corpus. 
+# Part of the training data is based on machine translated Norweigan dataset NoReC.
+# This script compiles NoReC data and outputs machine translated txt files from Norweigan to Swedish in the same format as the original corpus. 
 # Hopefully we never have to run this spaghetti mess again.
 
 warnings.filterwarnings("ignore")
